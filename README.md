@@ -29,8 +29,7 @@
 ## Config Summary
 
 ### Github Auto-Deploy Setup
--
--
+- This site is automatically deployed from GitHub to a DigitalOcean server. We created a Git repo on the DigitalOcean server (/var/www/gmvt135.site) that mirrors the GitHub repo. Then we fixed permissions on the server. We are able to SSH in, edit files, then we can now do the following steps: git add->commit->push which updates the Github repo. 
 
 ### Compression
 - Enabled gzip to handle our compression 
