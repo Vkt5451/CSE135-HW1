@@ -17,12 +17,18 @@
 - Username: `grader`
 - Password: `grader`
 
+- (Just In Case) 
+- Username: `gmohandas`
+- Password: `Paulgeorge13`
+
 ### Site Access Credentials
 - **Username:** [gmohandas]
 - **Password:** [Paulgeorge13]
 
 ## Site Links & Content
 * **Site URL:** [https://gmvt135.site](https://gmvt135.site)
+* **hello.php URL:** [https://gmvt135.site/hw1/hello.php](https://gmvt135.site/hw1/hello.php)
+* **report.html URL:** [https://gmvt135.site/hw1/report.html](https://gmvt135.site/hw1/report.html)
 
 
 
