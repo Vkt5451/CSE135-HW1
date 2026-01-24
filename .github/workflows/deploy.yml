@@ -1,0 +1,22 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if you use that
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.3
+        with:
+          host: 142.93.30.117
+          username: vkt5451
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: "."
+          target: "/var/www/gmvt135.site"
