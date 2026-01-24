@@ -35,7 +35,14 @@
 ## Config Summary
 
 ### Github Auto-Deploy Setup
-- This site is automatically deployed from GitHub to a DigitalOcean server. We created a Git repo on the DigitalOcean server (/var/www/gmvt135.site) that mirrors the GitHub repo. Then we fixed permissions on the server. We are able to SSH in, edit files, then we can now do the following steps: git add->commit->push which updates the Github repo. 
+- Created a GitHub repository to store the website source code 
+- Set up a DigitalOcean Ubuntu droplet and installed/configured Nginx to serve files from /var/www/gmvt135.site
+- Generated an SSH key pair for deployment and added the public key to the server for secure access
+- Added the private SSH key to GitHub as a repository secret so GitHub Actions could authenticate with the server
+- Created a GitHub Actions workflow that runs automatically on every push to the main branch
+- Configured the workflow to use SCP over SSH to copy files from GitHub to the server
+- Tested deployment by editing a file locally, pushing to GitHub, and seeing the live site update automatically
+- Verified success using GitHub Actions logs & checking website
 
 ### Compression
 - Enabled gzip to handle our compression 
