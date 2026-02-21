@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px 0px 0px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 200px;
+}
+
+/* Each column */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #eee;  
+  margin-right: 50px;
+  padding: 10px 25px;
+}
+
+
+h1, h2, p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/*
+
+HOME WORK SECTION
+
+*/
+.homework {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homework-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.homework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.homework-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.homework-item h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.homework-item ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.homework-item li {
+  margin-bottom: 0.5rem;
+}
+
+.homework-item a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.homework-item a:hover {
+  text-decoration: underline;
+}

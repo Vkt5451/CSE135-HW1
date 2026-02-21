@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Page</title>
+
+  <!-- Favicon (add favicon.ico to root folder) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Name</h1>
+    <p>Short header</p>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>About me</p>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Start here</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section id="fun">
+      <h2>Just for Fun</h2>
+      <p id="message">Click the button to change this message.</p>
+      <button type="button" onclick="changeMessage()">Click Me</button>
+    </section>
+  </main>
+
+
+  <script>
+    function changeMessage() {
+      var message = document.getElementById("message");
+      message.textContent = "Thanks for clicking! JavaScript is working.";
+    }
+  </script>
+</body>
+</html>
