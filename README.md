@@ -1,3 +1,36 @@
+# ⚠️ Submission Note (Please Read for Final Submission)
+
+## Git Commit Issue
+
+During submission, we encountered an issue while committing from our server that caused a system overload. Specifically, the `snapd` process began consuming excessive resources (103% CPU), and our latest changes did not successfully push to GitHub.
+
+After running `git status`, no issues were reported, so we proceeded with submission on Gradescope, not realizing that the repository had not been updated with the final version.
+
+## Project Location
+
+All final project files are located on our server at:
+
+test.gmvt135.site/public_html
+and 
+test.gmvt135.site/public_html/homework-4
+
+## Proof of No Changes After Submission
+
+To verify that no modifications were made after the submission deadline, we have included evidence showing the last modified timestamps of the project files on the server.
+
+These timestamps indicate that the files were last edited before the deadline (March 13th/14th at midnight) and remained unchanged afterward.
+
+![Last Modified Proof](ProofOfLastServerEdits.png)
+
+## Resolution
+
+After identifying the issue, we recovered the exact state of the project directly from the server and pushed it to this branch.
+
+This branch reflects the true final submission as it existed at the time of the deadline. We appreciate your time in reviewing our work and the context provided above.
+
+
+
+
 # CSE 135 — HW1 Submission (Team + Server Info)
 
 ## Team Members
