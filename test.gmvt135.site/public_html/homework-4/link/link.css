@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'san-serif';
+}
+
+body {
+    background: rgb(212, 211, 226);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: #4a71e0;
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 6px 14px;
+    transition: .5s;
+    backdrop-filter: blur(40px);
+}
+
+.sidebar.active {
+    width: 260px;
+
+}
+
+.sidebar .logo-menu {
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar .logo-menu .logo {
+    font-size: 25px;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.sidebar.active .logo-menu .logo {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+
+.sidebar .logo-menu .toggle-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.sidebar.active .logo-menu .toggle-btn {
+    left: 90%;
+
+}
+
+
+
+
+.sidebar .list {
+    margin-top: 10px;
+
+}
+
+.list .list-item {
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    line-height: 50px;
+}
+
+.list .list-item a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: .5s;
+}
+
+.list .list-item.active a,
+.list .list-item a:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+
+.list .list-item a i {
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebar .link-name {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.sidebar.active .link-name {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: calc(.1s * var(--i));
+}
+
+
+/* Update your main content area */
+.main-content {
+    position: relative;
+    margin-left: 100px;
+    padding: 30px;
+    transition: margin-left .5s ease;
+    min-height: 100vh;
+}
+
+.sidebar.active~.main-content {
+    margin-left: 280px;
+}
+
+/* THE GRID SYSTEM */
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 30px;
+    /* Space between boxes */
+    width: 100%;
+}
+
+/* INDIVIDUAL BOX STYLING */
+.cardBox {
+    background: #fff;
+    padding: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+.cardContent {
+    flex: 1;
+    text-align: center;
+}
+
+.cardBox:hover {
+    background: #6488eda0;
+    /* Matches your sidebar color */
+}
+
+.cardBox:hover .numbers,
+.cardBox:hover .cardName,
+.cardBox:hover .iconBx {
+    color: #fff;
+}
+
+.numbers {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4a71e0;
+}
+
+.cardName {
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.iconBx {
+    font-size: 3.5rem;
+    color: #888;
+}
+
+
+
+/* Responsive: Stack them on mobile */
+@media (max-width: 991px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardContainer {
+        grid-template-columns: 1fr;
+    }
+}
